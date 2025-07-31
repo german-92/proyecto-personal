@@ -1,2 +1,2 @@
 # Germán
-este proyecto sera utilizado para el curso de ComunidadIt.
+Este proyecto sera utilizado para el curso de ComunidadIt.
