@@ -1,0 +1,42 @@
+/* NAVBAR */
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-vibrante);
+  padding: 10px 20px;
+}
+  
+  .footer-nav a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav a:hover {
+    color: #007bff; /* Color al pasar el mouse */
+  }
+  .logo {
+    width: 200px;     /* Tamaño sugerido, podés probar también con 70px o 100px */
+    height: auto;    /* Mantiene proporción */
+  }
+  .footer-nav ul {
+    display: flex;
+    gap: 20px; /* espacio entre los ítems */
+    list-style: none; /* quitamos los bullets */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* centra verticalmente dentro de la nav si querés */
+  }
+  <style>
+    :root {
+      --azul-claro: #D7E3F3;
+      --azul-fondo: #A4BDE8;
+      --azul-oscuro: #263A91;
+      --azul-vibrante: #476FC2;
+      --crema-suave: #F3F0E5;
+      --lavanda: #C8BDE5;
+    }
+    
+  
