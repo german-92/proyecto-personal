@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Acompañar es Hacer Lugar</title>
+  <style>
+    :root {
+      --azul-claro: #D7E3F3;
+      --azul-fondo: #A4BDE8;
+      --azul-oscuro: #263A91;
+      --azul-vibrante: #476FC2;
+      --crema-suave: #F3F0E5;
+      --lavanda: #C8BDE5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--azul-fondo);
+      color: var(--azul-oscuro);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--azul-vibrante);
+      padding: 10px 20px;
+    }
+
+    .footer-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-nav li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .footer-nav li a:hover {
+      color: var(--crema-suave);
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+    }
+
+    header {
+      background-color: var(--azul-claro);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: var(--azul-oscuro);
+    }
+
+    main {
+      background-color: var(--crema-suave);
+      padding: 2rem;
+    }
+
+    section {
+      background-color: var(--lavanda);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: var(--azul-vibrante);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: var(--azul-oscuro);
+    }
+
+    footer {
+      background-color: var(--azul-vibrante);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .footer-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .redes-sociales a {
+      color: var(--crema-suave);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .redes-sociales a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="footer-nav">
+    <a href="index.html">
+      <img class="logo" src="osito_completo_transparente.png" alt="Logo Osito">
+    </a>
+    <ul>
+      <li><a href="index.html">Acerca de mí</a></li>
+      <li><a href="experiencias.html">Experiencias</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contacto</h1>
+    <p>Podés comunicarte conmigo completando el formulario o a través de los siguientes medios:</p>
+  </header>
+
+  <main>
+
+    <!-- Sección de datos de contacto -->
+    <section>
+      <h2>Datos de contacto directo</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:german.jara.2992@gmail.com">german.jara.2992@gmail.com</a></li>
+        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5492216787407" target="_blank">+54 9 221 678 7407</a></li>
+        <li><strong>Ubicación:</strong> La Plata, Buenos Aires, Argentina</li>
+      </ul>
+    </section>
+
+    <!-- Sección de formulario -->
+    <section>
+      <h2>Formulario de contacto</h2> 
+
+      <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+    <!-- Sección de redes -->
+    <section>
+      <h2>También podés encontrarme en:</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/germanjara992/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>Germán Jara: Lic. en Trabajo Social (UNLP).<br>Especialista en Inclusión y Bienestar Social Organizacional.</p>
+      &copy; La Plata, 2025.
+      <div class="redes-sociales">
+        <a href="https://www.linkedin.com/in/germanjara992/" target="_blank">LinkedIn</a><br>
+        <a>Email: german.jara.2992@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

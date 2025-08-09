@@ -1,4 +1,59 @@
-/* NAVBAR */
+/* VARIABLES */
+:root {
+  --azul-claro: #D7E3F3;
+  --azul-fondo: #A4BDE8;
+  --azul-oscuro: #263A91;
+  --azul-vibrante: #476FC2;
+  --crema-suave: #F3F0E5;
+  --lavanda: #C8BDE5;
+}
+
+/* TIPOGRAFÍA */
+.fuente-gruesa {
+  font-weight: 400;
+  /* color: ;  <- definir si querés un color específico */
+}
+
+.fuente-linda {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LOGO (unificado) */
+.logo {
+  width: 150px; /* Tamaño unificado. Podés ajustar acá. */
+  height: auto; /* Mantiene proporción */
+}
+
+/* NAVBAR PRINCIPAL */
+.menu-principal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--azul-vibrante);
+  padding: 10px 20px;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu-principal a:hover { /* color al pasar el mouse */
+  color: var(--azul-claro);
+}
+
+/* NAVBAR FOOTER */
 .footer-nav {
   display: flex;
   justify-content: space-between;
@@ -6,37 +61,50 @@
   background-color: var(--azul-vibrante);
   padding: 10px 20px;
 }
-  
-  .footer-nav a{
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-nav a:hover {
-    color: #007bff; /* Color al pasar el mouse */
-  }
-  .logo {
-    width: 200px;     /* Tamaño sugerido, podés probar también con 70px o 100px */
-    height: auto;    /* Mantiene proporción */
-  }
-  .footer-nav ul {
-    display: flex;
-    gap: 20px; /* espacio entre los ítems */
-    list-style: none; /* quitamos los bullets */
-    margin: 0;
-    padding: 0;
-    align-items: center; /* centra verticalmente dentro de la nav si querés */
-  }
-  <style>
-    :root {
-      --azul-claro: #D7E3F3;
-      --azul-fondo: #A4BDE8;
-      --azul-oscuro: #263A91;
-      --azul-vibrante: #476FC2;
-      --crema-suave: #F3F0E5;
-      --lavanda: #C8BDE5;
-    }
-    
-  
+
+.footer-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #007bff; /* Color al pasar el mouse */
+}
+
+/* HEADER */
+header {
+  background-color: var(--azul-claro);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: var(--azul-oscuro);
+}
+
+/* MAIN */
+main {
+  background-color: var(--crema-suave);
+  padding: 2rem;
+}
+
+/* SECCIONES */
+section {
+  background-color: var(--lavanda);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+}
