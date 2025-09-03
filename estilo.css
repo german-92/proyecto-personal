@@ -1,58 +1,48 @@
 /* ===================================== */
 /* VARIABLES                              */
 /* ===================================== */
-:root{
+:root {
   /* Tu paleta turquesa */
   --color1: #12566f;
   --color2: #147387;
   --color3: #17a3a5;
 
   /* Tu paleta azul original (ya usada en tu CSS) */
-  --azul-claro: #D7E3F3;
-  --azul-fondo: #A4BDE8;
-  --azul-oscuro: #263A91;
-  --azul-vibrante: #476FC2;
-  --crema-suave: #F3F0E5;
-  --lavanda: #C8BDE5;
+  --azul-claro: #d7e3f3;
+  --azul-fondo: #a4bde8;
+  --azul-oscuro: #263a91;
+  --azul-vibrante: #476fc2;
+  --crema-suave: #f3f0e5;
+  --lavanda: #c8bde5;
 
   --texto: #222;
 }
 
-/*--azul-claro: #D7E3F3;
-      --azul-fondo: #A4BDE8;
-      --azul-oscuro: #263A91;
-      --azul-vibrante: #476FC2;
-      --crema-suave: #F3F0E5;
-      --lavanda: #C8BDE5;*/
-
-/* ===================================== */
 /*  / BODY                            */
 /* ===================================== */
-body{
-  margin:0;
-  font-family: 'Work Sans', Arial, sans-serif;
+body {
+  margin: 0;
+  font-family: "Work Sans", Arial, sans-serif;
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;   /* en lugar de overflow: hidden; para que se pueda scrollear */
+  overflow-x: hidden; /* en lugar de overflow: hidden; para que se pueda scrollear */
   color: var(--texto);
   background-color: var(--crema-suave);
-
 }
 /* Fondo con desenfoque */
 body::before {
   content: "";
-  position: fixed;            /* Se mantiene al hacer scroll */
+  position: fixed; /* Se mantiene al hacer scroll */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1;                /* Detrás del contenido */
+  z-index: -1; /* Detrás del contenido */
   opacity: 0.5;
 }
 
-/* ===================================== */
 /* TIPOGRAFÍAS                            */
 /* ===================================== */
 .fuente-gruesa {
@@ -61,19 +51,18 @@ body::before {
 }
 
 .fuente-linda {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
-
-
-
-/* ===================================== */
 /* LOGO  */
-.logo{
-  width: 50px; height: 50px; border-radius:50%;
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   object-fit: cover;
   border: 2px solid black;
-  transition: transform .3s ease, box-shadow .3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-wrap: wrap;
 }
 
 /* Tarjeta de info personal */
@@ -96,7 +85,9 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  gap: 12px;
+  padding: 12px 16px;
+  flex-wrap: wrap;
 }
 
 .menu-principal ul {
@@ -114,7 +105,8 @@ body::before {
   transition: color 0.3s ease;
 }
 
-.menu-principal a:hover {     /* Color al pasar el mouse */
+.menu-principal a:hover {
+  /* Color al pasar el mouse */
   color: var(--azul-claro);
 }
 
@@ -135,7 +127,7 @@ body::before {
 }
 
 .footer-nav a:hover {
-  --azul-vibrante: #476FC2;            /* Color al pasar el mouse */
+  --azul-vibrante: #476fc2; /* Color al pasar el mouse */
 }
 
 /* ===================================== */
@@ -144,15 +136,12 @@ body::before {
 /* Header */
 header {
   text-align: center;
-  
 }
 
 header h1 {
   margin: 0;
   font-size: 2rem;
 }
-
-
 
 /* Main */
 main {
@@ -208,65 +197,68 @@ button:hover {
   --color3: #17a3a5;
 }
 
-
-
-
-/*<script>
-    // Año dinámico
-    const y = document.getElementById('year');
-    if (y) y.textContent = new Date().getFullYear();
-
-    // Feedback básico de envío (sin backend)
-    const form = document.getElementById('form-contacto');
-    const msg  = document.querySelector('.form-msg');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        msg.textContent = 'Revisá los campos marcados.';
-        msg.style.color = '#b00020';
-        form.reportValidity();
-        return;
-      }
-      // Si después sumás backend, acá hacés el fetch/POST
-      msg.textContent = '¡Gracias! Te responderé a la brevedad.';
-      msg.style.color = 'green';
-      form.reset();
-    });
-  </script>*/
-
-
-  /*PAGINA INDICE*/
-  .container{
-    display: flex;
-    flex-direction: row;   /* fila */
-  flex-wrap: nowrap;     /* fuerza una sola fila */
-  gap: 1rem;             /* espacio entre columnas */
-  align-items: stretch;  /* mismas alturas */
+/*PAGINA INDICE*/
+.container {
+  display: flex;
+  flex-direction: row; /* fila */
+  flex-wrap: nowrap; /* fuerza una sola fila */
+  gap: 1rem; /* espacio entre columnas */
+  align-items: stretch; /* mismas alturas */
   padding: 5em;
-  }
-  .container-child , experiencia{
-    flex: 1 1 0;           /* 50/50 autom&aacute;tico */
-  min-width: 0;          /* evita desbordes de contenido largo */
+  max-width: 1100px;
+  margin-inline: auto;
+}
+.container-child,
+experiencia {
+  flex: 1 1 0; /* 50/50 autom&aacute;tico */
+  min-width: 0; /* evita desbordes de contenido largo */
   padding: 1rem;
   flex-direction: column;
+}
 
-  }
-
-  /*main div {
+/*main div {
     display: flex;
   }*/
-  .container-child p, .experiencia-child p {
-    text-align: justify;
-  }
-  .container-child img, .experiencia-child img {
-    width: 25em;
-    border-radius: 5em;
-    margin-left: 5em;
-  }
+.container-child p,
+.experiencia-child p {
+  text-align: justify;
+}
+.container-child img,
+.experiencia-child img {
+  width: 25em;
+  border-radius: 5em;
+  margin-left: 5em;
+  max-width: 100%;
+  height: auto;
+}
 
-  .experiencia{
-    display: block;
-    flex: auto;
-    padding-left: 1em;
-    padding-right: 1em;
+.experiencia {
+  display: flex;
+  flex: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.experiencia-container {
+  flex-wrap: wrap;
+}
+/* ejemplo de estilo */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #476fc2;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Móviles (<768px): override */
+@media (max-width: 768px) {
+  .container .experiencia-container {
+    flex-direction: column-reverse; /* lo que antes era el base móvil */
+    gap: 0; /* asegura sin espacio entre ítems si lo necesitas */
   }
+}
