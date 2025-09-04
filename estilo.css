@@ -1,17 +1,10 @@
-/* ===================================== */
-/* VARIABLES                              */
-/* ===================================== */
+
 :root {
   /* Tu paleta turquesa */
-  --color1: #12566f;
-  --color2: #147387;
   --color3: #17a3a5;
 
   /* Tu paleta azul original (ya usada en tu CSS) */
-  --azul-claro: #d7e3f3;
-  --azul-fondo: #a4bde8;
-  --azul-oscuro: #263a91;
-  --azul-vibrante: #476fc2;
+  
   --crema-suave: #f3f0e5;
   --lavanda: #c8bde5;
 
@@ -77,7 +70,7 @@ body::before {
   line-height: 1.6;
 }
 
-/* ===================================== */
+
 /* NAVEGACIÓN                             */
 /* ===================================== */
 /* Navbar principal */
@@ -88,6 +81,7 @@ body::before {
   gap: 12px;
   padding: 12px 16px;
   flex-wrap: wrap;
+  color: 00000;
 }
 
 .menu-principal ul {
@@ -107,7 +101,7 @@ body::before {
 
 .menu-principal a:hover {
   /* Color al pasar el mouse */
-  color: var(--azul-claro);
+  color: var(#17a3a5;);
 }
 
 /* Navbar footer */
@@ -115,7 +109,7 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--azul-vibrante);
+  background-color: var(#17a3a5);
   padding: 10px 20px;
 }
 
@@ -130,7 +124,6 @@ body::before {
   --azul-vibrante: #476fc2; /* Color al pasar el mouse */
 }
 
-/* ===================================== */
 /* ESTRUCTURA (Header / Main / Sections)  */
 /* ===================================== */
 /* Header */
@@ -150,7 +143,7 @@ main {
 
 /* Secciones */
 section {
-  background-color: var(--lavanda);
+  background-color: var(--#17a3a5;);
   padding: 1.5rem;
   margin-bottom: 2rem;
   border-radius: 10px;
@@ -184,7 +177,7 @@ button {
   margin-top: 1rem;
   padding: 0.7rem 1.5rem;
   background-color: var(--color3);
-  color: white;
+  color: #17a3a5;;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -193,7 +186,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--color3);
+  background-color: var(00000);
   --color3: #17a3a5;
 }
 
@@ -245,7 +238,7 @@ experiencia {
 .btn {
   display: inline-block;
   padding: 12px 20px;
-  background: #476fc2;
+  background: #144955;
   color: #fff;
   border-radius: 10px;
   text-decoration: none;

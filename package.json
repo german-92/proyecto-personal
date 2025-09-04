@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-personal",
+  "version": "1.0.0",
+  "description": "Este proyecto sera utilizado para el curso de ComunidadIt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purge": "css-purge -c estilo.css -h 'index.html,acerca_de_mi.html,contacto.html' -o estilo-final.css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/german-92/proyecto-personal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/german-92/proyecto-personal/issues"
+  },
+  "homepage": "https://github.com/german-92/proyecto-personal#readme",
+  "devDependencies": {
+    "css-purge": "^3.1.8"
+  }
+}
