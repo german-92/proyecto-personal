@@ -4,9 +4,9 @@ formulario.addEventListener("submit", function (event) {
   event.preventDefault(); // Evita que se envíe el formulario
 
   // Obtenemos valores
-  const nombre = document.getElementById("nombre").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const mensaje = document.getElementById("mensaje").value.trim();
+  const nombre = document.querySelector("#nombre").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const mensaje = document.querySelector("#mensaje").value.trim();
 
   // Validaciones básicas
   if (nombre === "") {
@@ -27,9 +27,10 @@ formulario.addEventListener("submit", function (event) {
     return;
   }
 
-  // Si pasa validaciones, mostramos los datos
-  console.log("✅ Datos del formulario:");
+  // Si pasa las validaciones, mostramos los datos.
+  console.log("Datos del formulario:");
   console.log("Nombre:", nombre);
   console.log("E-mail:", email);
   console.log("Mensaje:", mensaje);
 });
+formulario.reset();
