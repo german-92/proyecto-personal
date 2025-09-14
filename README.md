@@ -44,22 +44,21 @@ Con el modelo de cajas actual, cada hijo (que incluye un elemento `<p>` con text
 ## Javascript + DOM
 **⚠️ Aún Estoy trabajando en esta parte.**
 
-H utilizado **JavaScript** principalmente para **validaciones mínimas del formulario**.  
+He utilizado **JavaScript** principalmente para **validaciones mínimas del formulario**.  
 - Al enviar el formulario se usa `event.preventDefault()` para **interceptar el submit**, obtener los datos y recién ahí ejecutar la validación.  
 - Las validaciones actuales son básicas (presencia de campos y formato simple), enfocadas en demostrar el flujo de captura y chequeo antes de continuar con el procesamiento. (CONSOLA)
 
 #### Posibles mejoras
-- Agregar validaciones más estrictas (por ejemplo, **longitud mínima del nombre**).  
+- Agregar validaciones como por ejemplo, **longitud mínima del nombre**.  
 - Validar el **mail con un patrón** 
 - Mostrar mensajes de error accesibles y con foco manejado.  
 - Deshabilitar el botón de envío mientras se valida o procesa.
 
 
-El uso del DOM (document) lo utilice exclusivamente para poder manipular el formulario
+El uso del DOM (document) lo utilice exclusivamente para poder manipular el **formulario**.
 
 ---
 
-## Futuras mejoras
-- Implementar un modo oscuro (modo oscuro).   
+## Futuras mejoras  
 - Integrar un backend que tome los comentarios y los almacene en una base de datos.  
 - Mejorar la accesibilidad.

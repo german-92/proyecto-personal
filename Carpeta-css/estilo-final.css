@@ -30,7 +30,7 @@ body::before {
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #000;
-  transition: transform 0.3s ease,  0.3s ease;
+  transition: transform 0.3s ease, 0.3s ease;
 }
 .menu-principal {
   display: flex;
@@ -142,14 +142,14 @@ experiencia {
 /*Tablet*/
 @media (min-width: 768px) {
   container .experiencia-container {
-    flex-direction: column-reverse; /* lo que antes era el base móvil */
+    flex-direction: column-reverse;
     gap: 0;
   }
 }
 /*desktop*/
 @media (min-width: 1024px) {
   container .experiencia-container {
-    flex-direction: column-reverse; /* lo que antes era el base móvil */
+    flex-direction: column-reverse;
     gap: 0;
   }
 }
