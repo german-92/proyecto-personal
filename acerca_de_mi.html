@@ -3,8 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>Mi blog Personal</title>
+    <script>
+      (function () {
+        const guardado = localStorage.getItem("theme"); // 'dark' | 'light' | null
+        const prefiereOscuro = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const usarDark = guardado ? guardado === "dark" : prefiereOscuro;
 
-    <link rel="stylesheet" href="Carpeta-css/estilo-final.css" />
+        const root = document.documentElement; // <html>
+        if (usarDark) {
+          root.classList.add("oscuro"); // tu clase en español
+          root.style.colorScheme = "dark"; // SIEMPRE en inglés
+        } else {
+          root.classList.remove("oscuro");
+          root.style.colorScheme = "light";
+        }
+      })();
+    </script>
+    <!----ESTILO CSS EXTERNO-->
+    <link rel="stylesheet" href="style_css/estilo-final.css" />
+
+    <script defer src="scripts_js/cambiar_tema.js"></script>
   </head>
   <body>
     <header>
@@ -33,8 +53,8 @@
               href="https://www.ciatba.com.ar/"
               title="enlace a la página del Ciat-IFSA"
               ><strong> Acompañamiento Terapéutico</strong></a
-            >).Tengo 32 años, nací en Buenos Aires pero vivo en La Plata desde que
-            terminé el secundario. A lo largo de mi recorrido académico y
+            >).Tengo 32 años, nací en Buenos Aires pero vivo en La Plata desde
+            que terminé el secundario. A lo largo de mi recorrido académico y
             profesional confirmé que trabajar con otras personas es mi impulso,
             por eso elegí estar donde estoy.
           </p>

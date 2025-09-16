@@ -8,9 +8,28 @@
       name="description"
       content="Lic. en Trabajo Social. Construyendo inclusión desde lo cotidiano: acompañamiento sensible, inclusión y trabajo con familias."
     />
+    <script>
+      (function () {
+        const guardado = localStorage.getItem("theme"); // 'dark' | 'light' | null
+        const prefiereOscuro = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const usarDark = guardado ? guardado === "dark" : prefiereOscuro;
 
-    <link rel="stylesheet" href="Carpeta-css/estilo-final.css" />
+        const root = document.documentElement;
+        if (usarDark) {
+          root.classList.add("oscuro");
+          root.style.colorScheme = "dark";
+        } else {
+          root.classList.remove("oscuro");
+          root.style.colorScheme = "light";
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="style_css/estilo-final.css" />
     <!----ESTILO CSS EXTERNO-->
+    <script defer src="scripts_js/cambiar_tema.js"></script>
   </head>
   <body>
     <header>
@@ -30,6 +49,8 @@
       <div class="container">
         <div class="container-child">
           <h1>Construyendo inclusión desde lo cotidiano</h1>
+          <button id="cambiar-tema" aria-pressed="false">🌙 Tema oscuro</button>
+
           <p>
             Creo en el acompañamiento como una práctica sensible, basada en el
             vínculo, el cuidado y la escucha.

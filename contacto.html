@@ -3,8 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>Contacto | Acompañar es Hacer Lugar</title>
-    <style></style>
-    <link rel="stylesheet" href="Carpeta-css/estilo-final.css" />
+    <script>
+      (function () {
+        const guardado = localStorage.getItem("theme"); // 'dark' | 'light' | null
+        const prefiereOscuro = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const usarDark = guardado ? guardado === "dark" : prefiereOscuro;
+
+        const root = document.documentElement;
+        if (usarDark) {
+          root.classList.add("oscuro");
+          root.style.colorScheme = "dark";
+        } else {
+          root.classList.remove("oscuro");
+          root.style.colorScheme = "light";
+        }
+      })();
+    </script>
+    <!----ESTILO CSS EXTERNO-->
+    <link rel="stylesheet" href="style_css/estilo-final.css" />
+
+    <script defer src="scripts_js/cambiar_tema.js"></script>
   </head>
   <body>
     <header>
@@ -57,13 +77,14 @@
             <button type="submit" class="btn">Enviar</button>
           </form>
         </div>
-
         <div class="container-child">
           <img class="contacto-image" src="images/contacto-.png" />
         </div>
       </div>
+      <div id="errores"></div>
+      <div id="resultados"></div>
     </main>
-    <script src="script.js"></script> <!----lo pongo aca para q se cargue el HTML y luego el JS-->
-
+    <script src="scripts_js/script.js"></script>
+    <!----lo pongo aca para q se cargue el HTML y luego el JS-->
   </body>
 </html>

@@ -3,8 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <title>Acompañar es Hacer Lugar</title>
-    <style></style>
-    <link rel="stylesheet" href="Carpeta-css/estilo-final.css" />
+    <script>
+      (function () {
+        const guardado = localStorage.getItem("theme"); // 'dark' | 'light' | null
+        const prefiereOscuro = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const usarDark = guardado ? guardado === "dark" : prefiereOscuro;
+
+        const root = document.documentElement;
+        if (usarDark) {
+          root.classList.add("oscuro");
+          root.style.colorScheme = "dark";
+        } else {
+          root.classList.remove("oscuro");
+          root.style.colorScheme = "light";
+        }
+      })();
+    </script>
+    <!----ESTILO CSS EXTERNO-->
+    <link rel="stylesheet" href="style_css/estilo-final.css" />
+
+    <script defer src="scripts_js/cambiar_tema.js"></script>
   </head>
   <body>
     <header>
